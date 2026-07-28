@@ -1,0 +1,6 @@
+@FiapStore.API_HostAddress = http://localhost:5029
+
+GET {{FiapStore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
