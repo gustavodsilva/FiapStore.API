@@ -13,6 +13,7 @@ public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
         builder.Property(p => p.Id).HasColumnType("INT").ValueGeneratedNever().UseIdentityColumn();
         builder.Property(p => p.DataCriacao).HasColumnName("DataCriacao").HasColumnType("DATETIME").IsRequired();
         builder.Property(p => p.Nome).HasColumnType("VARCHAR(100)").IsRequired();
+        builder.Property(p => p.CPF).HasColumnType("VARCHAR(11)").IsRequired();
         builder.Property(p => p.DataNascimento).HasColumnType("DATETIME");
     }
 }

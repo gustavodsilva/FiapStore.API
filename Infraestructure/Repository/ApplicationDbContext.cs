@@ -4,9 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Repository;
 
-internal class ApplicationDbContext : DbContext
+public class ApplicationDbContext : DbContext
 {
     private readonly string _connectionString;
+
+    public ApplicationDbContext()
+    {
+        
+    }
 
     public ApplicationDbContext(string connectionString)
     {
@@ -19,13 +24,13 @@ internal class ApplicationDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if (optionsBuilder.IsConfigured)
+        if (!optionsBuilder.IsConfigured)
         {
             optionsBuilder.UseSqlServer(_connectionString);
         }
     }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
     }
