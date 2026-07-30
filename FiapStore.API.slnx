@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Core/Core.csproj" Id="c3a76479-26f9-47c5-9e4a-94bace71e308" />
   <Project Path="FiapStore.API/FiapStore.API.csproj" />
+  <Project Path="Infraestructure.Scaffold/Infraestructure.Scaffold.csproj" Id="c0ac01b5-1499-4549-abca-5b903f4bae45" />
   <Project Path="Infraestructure/Infraestructure.csproj" Id="e8747020-557a-44eb-94d2-47440f2c3d35" />
 </Solution>
